@@ -34,7 +34,7 @@ def generateTwoPrime(bit_length):
         return generateTwoPrime(bit_length)  # Retry if p and q don't satisfy the condition
 
 def keygeneration(request):
-    p, q, n = None, None, None  # Initial values for GET requests
+    p, q, n = None, None, None
 
     if request.method == "POST":
         # Get the bit length from the form
@@ -44,3 +44,5 @@ def keygeneration(request):
         p, q, n = generateTwoPrime(bit_length)
 
     return render(request, 'base/keygeneration.html', {'p': p, 'q': q, 'n': n})
+
+

@@ -43,4 +43,4 @@ def keygeneration(request):
         # Generate the two primes and n
         p, q, n = generateTwoPrime(bit_length)
 
-    return render(request, 'base/keygeneration.html', {'p': p, 'q': q, 'n': n})
+    return render(request, 'base/template/base/keygeneration.html', {'p': p, 'q': q, 'n': n})
